@@ -1,0 +1,35 @@
+print("===== STUDENT MARKS CALCULATOR =====")
+
+name = input("Enter Student Name: ")
+
+python = int(input("Enter Python Marks: "))
+java = int(input("Enter Java Marks: "))
+dbms = int(input("Enter DBMS Marks: "))
+
+total = python + java + dbms
+percentage = total / 300 * 100
+
+print("\n===== STUDENT RESULT =====")
+print("Student Name:", name)
+print("Total Marks:", total, "/ 300")
+print("Percentage:", round(percentage, 2), "%")
+
+if percentage >= 90:
+    print("Grade: A+")
+elif percentage >= 75:
+    print("Grade: A")
+elif percentage >= 60:
+    print("Grade: B")
+elif percentage >= 50:
+    print("Grade: C")
+elif percentage >= 35:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+if python < 35 or java < 35 or dbms < 35:
+    print("Result: FAIL")
+elif percentage >= 35:
+    print("Result: PASS")
+else:
+    print("Result: FAIL")
